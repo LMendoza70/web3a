@@ -1,15 +1,25 @@
-var v1=0,v2=0,re,texto='',uss="admin",pss="0000"
+var v1=0,v2=0,re,texto='',uss="admin",pss="0000",contador=0
 //declaramos el formulario para poder invocuar su evento submit
 var form=document.getElementById("frmlogin");
 
 form.addEventListener("submit",function(evento){
     var usuario =document.getElementById("user").value
     var password =document.getElementById("pass").value
+    var boton=document.getElementById("boton")
+    var url="../respuesta.html"
+    var parametros="?usuario="+encodeURIComponent(usuario)+"&contraseña="+encodeURIComponent(password)
+
+    //preventdefault detiene el event submit
     evento.preventDefault();
     if(uss==usuario && pss==password){
-        window.location.href="../respuesta.html"
+        //window.location.href invoca una url
+        window.location.href=(url+parametros)
     }else{
-        alert("Datos incorrectos")
+        if(contador<3){
+            contador=contador+1
+            alert("Datos incorrectos intento : "+contador)
+        }else
+            boton.disabled=true
     }
 
 })
