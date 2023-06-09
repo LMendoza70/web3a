@@ -5,8 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularios</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>practica de formularios</h1>
+    <div>
+      <div class="header">
+        <h1>Practica de formularios</h1>
+        <img src="./src/logo.png" alt="ok" />
+      </div>
+      <div>
+        <h2>Login</h2>
+        <form
+          action="index.html"
+          method="get"
+          name="frmlogin"
+          autocomplete="off"
+        >
+          <fieldset>
+            <legend>Login</legend>
+            <table>
+              <tr>
+                <td><label for="user">Usuario : </label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="user"
+                    id="user"
+                    placeholder="Usuario"
+                    required
+                    minlength="3"
+                    maxlength="10"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="pass">Password : </label></td>
+                <td>
+                  <input
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    placeholder="Password"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Login..." /></td>
+              </tr>
+            </table>
+            <p>Olvido su contraseña? <a href="recuperar.html">Aqui...</a></p>
+            <p>No tienes cuenta? <a href="registro.html">Registrate...</a></p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="header">
+        <h2>footer</h2>
+        <img src="./src/logo.png" alt="ok" />
+      </div>
+    </div>
   </body>
 </html>

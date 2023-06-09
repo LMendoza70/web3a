@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica JS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/inicio.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <h1>Practica JS</h1>
+        <img src="./src/logo.png" alt="ok" />
+      </div>
+      <div>
+        <h2>Calculadora...</h2>
+        <p>
+          <input
+            type="number"
+            name="v1"
+            id="v1"
+            placeholder="Valor 1"
+            onblur="captura1()"
+          />
+        </p>
+        <p>
+          <input
+            type="number"
+            name="v2"
+            id="v2"
+            placeholder="Valor 2"
+            onblur="captura2()"
+          />
+        </p>
+
+        <input type="button" value="+" onclick="sum()" />
+        <input type="button" value="-" onclick="res()" />
+        <input type="button" value="*" onclick="mul()" />
+        <input type="button" value="/" onclick="div()" />
+        <h2 id="resultado">El resultado de la... es : ...</h2>
+      </div>
+      <div class="header">
+        <h2>footer</h2>
+        <img src="./src/logo.png" alt="ok" />
+      </div>
+    </div>
+  </body>
+</html>
